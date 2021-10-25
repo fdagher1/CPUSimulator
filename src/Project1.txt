@@ -1,0 +1,94 @@
+//READ IN 20 INPUTS
+//PRINT OUT 20 INPUTS
+
+IN 0, 0 //read in input 1 Store in R0
+OUT 0, 1 //output input 1 from R0
+STR 0, 0, 01000 //Store in memory 8
+
+IN 0, 0 //read in input 2 Store in R0
+OUT 0, 1 //Output input 2 from R0
+STR 0, 0, 01001 //Store in memory 9
+
+IN 0, 0 //read in input 3 Store in R0
+OUT 0, 1 //Output input 3 from R0
+STR 0, 0, 01010 //Store in memory 10
+
+IN 0, 0 //read in input 4 Store in R0
+OUT 0, 1 //Output input 4 from R0
+STR 0, 0, 01011 //Store in memory 11
+
+IN 0, 0 //read in input 5 Store in R0
+OUT 0, 1 //Output input 5 from R0
+STR 0, 0, 01100 //Store in memory 12
+
+IN 0, 0 //read in input 6 Store in R0
+OUT 0, 1 //Output input 6 from R0
+STR 0, 0, 01101 //Store in memory 13
+
+IN 0, 0 //read in input 7 Store in R0
+OUT 0, 1 //Output input 7 from R0
+STR 0, 0, 01110 //Store in memory 14
+
+IN 0, 0 //read in input 8 Store in R0
+OUT 0, 1 //Output input 8 from R0
+STR 0, 0, 01111 //Store in memory 15
+
+IN 0, 0 //read in input 9 Store in R0
+OUT 0, 1 //Output input 9 from R0
+STR 0, 0, 10000 //Store in memory 16
+
+IN 0, 0 //read in input 10 Store in R0
+OUT 0, 1 //Output input 10 from R0
+STR 0, 0, 10001 //Store in memory 17
+
+IN 0, 0 //read in input 11 Store in R0
+OUT 0, 1 //Output input 11 from R0
+STR 0, 0, 10010 //Store in memory 18
+
+IN 0, 0 //read in input 12 Store in R0
+OUT 0, 1 //Output input 12 from R0
+STR 0, 0, 10011 //Store in memory 19
+
+IN 0, 0 //read in input 13 Store in R0
+OUT 0, 1 //Output input 13 from R0
+STR 0, 0, 10100 //Store in memory 20
+
+IN 0, 0 //read in input 14 Store in R0
+OUT 0, 1 //Output input 14 from R0
+STR 0, 0, 10101 //Store in memory 21
+
+IN 0, 0 //read in input 15 Store in R0
+OUT 0, 1 //Output input 15 from R0
+STR 0, 0, 10110 //Store in memory 22
+
+IN 0, 0 //read in input 16 Store in R0
+OUT 0, 1 //Output input 16 from R0
+STR 0, 0, 10111 //Store in memory 23
+
+IN 0, 0 //read in input 17 Store in R0
+OUT 0, 1 //Output input 17 from R0
+STR 0, 0, 11000 //Store in memory 24
+
+IN 0, 0 //read in input 18 Store in R0
+OUT 0, 1 //Output input 18 from R0
+STR 0, 0, 11001 //Store in memory 25
+
+IN 0, 0 //read in input 19 Store in R0
+OUT 0, 1 //Output input 19 from R0
+STR 0, 0, 11010 //Store in memory 26
+
+IN 0, 0 //read in input 20 Store in R0
+OUT 0, 1 //Output input 20 from R0
+STR 0, 0, 11011 //Store in memory 27
+
+//REQUEST FROM USER?
+IN 0, 0 //get input from USER store in R1
+
+//Go through all numbers and find the closest
+//IDEA: Divide all of them if 1 or 0 find the one with the lowest remainder
+//else go through and find the lowest quotient with the lowest remainder
+
+LDR 2, 0, 01000 //Load memory 8 into R2
+DVD 2, 0 //Divide input number by user number
+STR 2, 0, 01000 //Store quotient in memory 8
+STR 3, 0, 01000[,I] //Store remainder in memory 8 (indirect)
